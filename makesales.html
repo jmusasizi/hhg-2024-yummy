@@ -3,32 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Make Credit Sales</title>
-    <link rel="stylesheet" href="assets/css/makecreditsales.css">
+    <title>Make Sales</title>
+    <link rel="stylesheet" href="assets/css/makesales.css">
 </head>
 <body>
     <header class="header">
-        <h1>Happy Hoe Grocery Store Credit Sales</h1>
+        <h1>Happy Hoe Grocery Store Sales</h1>
         <nav class="navbar">
-            <a href="sales-agent-dashboard.html">sales-agent-dashboard</a>
-            <a href="stockdetails.html">stock</a>
-            <a href="makesales.html">Make Sales</a>
-            <a href="makecreditsales.html">Make Credit Sales</a>
-            <a href="#logout">Logout</a>
+            <a href="sales-agent-dashboard.html">Sales-agent-dashboard</a>
+            <a href="stocklist.html">Stock</a>
+            <a href="makesale.html">Make Sales</a>
+            <a href="logout.html">Logout</a>
         </nav>
     </header>
 
     <main class="main-content">
-        <section class="credit-sales-form">
-            <h2>Record a Credit Sale</h2>
+        <section class="sales-form">
+            <h2>Record a Sale</h2>
             <form action="#" method="POST">
-                <label for="customer-name">Customer Name:</label>
-                <input type="text" id="customer-name" name="customer-name" required>
-
-                <label for="customer-contact">Customer Contact:</label>
-                <input type="text" id="customer-contact" name="customer-contact" required>
-
-                <label for="item">product Name:</label>
+                <label for="item">productName:</label>
                 <input type="text" id="item" name="item" required>
 
                 <label for="quantity">Quantity:</label>
@@ -40,10 +33,7 @@
                 <label for="total">Total Amount (ugx):</label>
                 <input type="number" id="total" name="total" step="0.01" readonly>
 
-                <label for="due-date">Due Date:</label>
-                <input type="date" id="due-date" name="due-date" required>
-
-                <button type="submit">Submit Credit Sale</button>
+                <button type="submit">Submit Sale</button>
             </form>
         </section>
     </main>
