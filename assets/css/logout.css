@@ -1,0 +1,83 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: peachpuff;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: brown;
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.logout-section {
+    padding: 20px;
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: black;
+    margin-bottom: 20px;
+}
+
+.logout-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logout-btn, .cancel-btn {
+    background-color: brown;
+    color: paleturquoise;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover, .cancel-btn:hover {
+    background-color: black;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: brown;
+    color: white;
+    margin-top: 50px;
+}

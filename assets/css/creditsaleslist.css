@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: peachpuff;
     margin: 0;
     padding: 0;
     color: #333;
@@ -59,8 +59,8 @@ h2 {
 }
 
 .credit-sales-table th, .credit-sales-table td {
-    border: 1px solid #ddd;
-    padding: 12px;
+    border: 2px solid #ddd;
+    padding: 6px;
     text-align: left;
 }
 
@@ -70,7 +70,7 @@ h2 {
 }
 
 .credit-sales-table tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: red;
 }
 
 .credit-sales-table tr:hover {

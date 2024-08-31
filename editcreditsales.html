@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Credit Sales</title>
+    <link rel="stylesheet" href="assets/css/editcreditsales.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Edit Credit Sales</h2>
+        <form action="/update-credit-sale" method="POST">
+            <div class="form-group">
+                <label for="sale-id">Sale ID:</label>
+                <input type="text" id="sale-id" name="sale-id" placeholder="Enter Sale ID" required>
+            </div>
+
+            <div class="form-group">
+                <label for="customer-name">Customer Name:</label>
+                <input type="text" id="customer-name" name="customer-name" placeholder="Enter Customer Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="sale-date">Sale Date:</label>
+                <input type="date" id="sale-date" name="sale-date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="total-amount">Total Amount:</label>
+                <input type="number" id="total-amount" name="total-amount" placeholder="Enter Total Amount" required>
+            </div>
+
+            <div class="form-group">
+                <label for="paid-amount">Paid Amount:</label>
+                <input type="number" id="paid-amount" name="paid-amount" placeholder="Enter Paid Amount" required>
+            </div>
+
+            <div class="form-group">
+                <label for="balance-amount">Balance Amount:</label>
+                <input type="number" id="balance-amount" name="balance-amount" placeholder="Enter Balance Amount" required>
+            </div>
+
+            <div class="form-group">
+                <label for="due-date">Due Date:</label>
+                <input type="date" id="due-date" name="due-date" required>
+            </div>
+
+            <button type="submit" class="btn">Update Sale</button>
+        </form>
+    </div>
+</body>
+</html>
