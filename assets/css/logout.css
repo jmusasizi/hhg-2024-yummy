@@ -60,7 +60,7 @@ h2 {
 }
 
 .logout-btn, .cancel-btn {
-    background-color: brown;
+    background-color: red;
     color: paleturquoise;
     text-decoration: none;
     padding: 10px 20px;
