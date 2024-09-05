@@ -1,57 +1,32 @@
-<!DOCTYPE html>
+
+<npndoctype>html</npndoctype>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Add Stock</title>
-    <link rel="stylesheet" href="assets/css/addstock.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Add Stock</h1>
-        <form action="#" method="POST">
-            <div class="form-group">
-                <label for="productName">Product Name:</label>
-                <input type="text" id="productName" name="productName" required>
-            </div>
-
-            <div class="form-group">
-                <label for="supplierName">Supplier Name:</label>
-                <input type="text" id="supplierName" name="supplierName" required>
-            </div>
-
-            <div class="form-group">
-                <label for="quantity">Quantity:</label>
-                <input type="number" id="quantity" name="quantity" required>
-            </div>
-
-            <div class="form-group">
-                <label for="costPerUnit">Cost Per kg:</label>
-                <input type="number" id="costPerUnit" name="costPerUnit" step="0.01" required>
-            </div>
-
-            <div class="form-group">
-                <label for="totalCost">Total Cost:</label>
-                <input type="number" id="totalCost" name="totalCost" step="0.01" readonly>
-            </div>
-
-            <div class="form-group">
-                <button type="submit">Add Stock</button>
-            </div>
-        </form>
-    </div>
-
-    <script>
-        // Automatically calculate and fill in the total cost based on quantity and cost per kg
-        document.getElementById('quantity').addEventListener('input', calculateTotalCost);
-        document.getElementById('costPerUnit').addEventListener('input', calculateTotalCost);
-
-        function calculateTotalCost() {
-            const quantity = parseFloat(document.getElementById('quantity').value) || 0;
-            const costPerUnit = parseFloat(document.getElementById('costPerUnit').value) || 0;
-            const totalCost = quantity * costPerUnit;
-            document.getElementById('totalCost').value = totalCost.toFixed(2);
-        }
-    </script>
-</body>
+    <Link rel="stylesheet" href="assets/css/addstock.css++">    </Link>
+  </head>
+  <body>
+    <h2>Add New Stock</h2>
+    <form action="/add-stock-page" method="POST">
+      <input type="text" name="stockname" placeholder="Stock Name"/>
+      <select name="stocktype">
+        <option value="" disabled="disabled" selected="selected">Select a Stock Type</option>
+        <option value="cereals">Cereals</option>
+        <option value="grain">Grain</option>
+      </select>
+      <input type="number" name="tonnage" placeholder="Tonnage (kg)"/>
+      <input type="number" name="cost" placeholder="Cost per Kg (UGX)"/>
+      <input type="number" name="sellingprice" placeholder="Selling Price per Kg (UGX)"/>
+      <input type="text" name="dealer" placeholder="Dealer's Name"/>
+      <select name="storagebranch">
+        <option value="" disabled="disabled" selected="selected">Select Storage Branch</option>
+        <option value="maganjo">Maganjo</option>
+        <option value="matuga">Matuga        </option>
+      </select>
+      <input type="text" name="contact" placeholder="Dealer's Contact"/>
+      <input type="submit" value="Add Stock"/>
+    </form><a href="/all-stock-page">Go Back To Stock List Page.</a>
+  </body>
 </html>

@@ -1,0 +1,188 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(content="width=device-width, initial-scale=1.0", name="viewport")
+    title my website
+    meta(name="description", content=)
+    meta(name="keywords", content=)
+    // Favicons
+    link(href="assets/img/favicon.png", rel="icon")
+    link(href="assets/img/apple-touch-icon.png", rel="apple-touch-icon")
+    // Fonts
+    link(href="https://fonts.googleapis.com", rel="preconnect")
+    link(href="https://fonts.gstatic.com", rel="preconnect", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Amatic+SC:wght@400;700&display=swap", rel="stylesheet")
+    // Vendor CSS Files
+    link(href="assets/vendor/bootstrap/css/bootstrap.min.css", rel="stylesheet")
+    link(href="assets/vendor/bootstrap-icons/bootstrap-icons.css", rel="stylesheet")
+    link(href="assets/vendor/aos/aos.css", rel="stylesheet")
+    link(href="assets/vendor/glightbox/css/glightbox.min.css", rel="stylesheet")
+    link(href="assets/vendor/swiper/swiper-bundle.min.css", rel="stylesheet")
+    // Main CSS File
+    link(href="assets/css/main.css", rel="stylesheet")
+    //
+      =======================================================
+      * Template Name: Yummy
+      * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
+      * Updated: Aug 07 2024 with Bootstrap v5.3.3
+      * Author: BootstrapMade.com
+      * License: https://bootstrapmade.com/license/
+      ========================================================
+  body.index-page
+    header#header.header.d-flex.align-items-center.sticky-top
+      .container.position-relative.d-flex.align-items-center.justify-content-between
+        a.logo.d-flex.align-items-center.me-auto.me-xl-0(href="index.html")
+          // Uncomment the line below if you also wish to use an image logo
+          // <img src="assets/img/logo.png" alt="">
+          h1.sitename HHG 
+            small Store
+          span .
+        nav#navmenu.navmenu
+          ul
+            button.button
+              li
+                a.active(href="#hero") Home
+                  br
+            button.button
+              li
+                a(href="../login.html") signin
+            button.button
+              li
+                a(href="/Yummy/signup.html") register
+            i.mobile-nav-toggle.d-xl-none.bi.bi-list
+            main.main
+              // Hero Section
+              section#hero.hero.section(style="background-image: url(assets/img/produce/home.jpg);background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;color: white;")
+                .container
+                  .row.gy-4.justify-content-center.justify-content-lg-between
+                    .col-lg-5.order-2.order-lg-1.d-flex.flex-column.justify-content-center
+                      // change the words
+                      h1(data-aos="fade-up", style="color:white") Welcome to HAPPY HOE GROCERY
+                        br
+                        | Home for best services ever
+                      p(data-aos="fade-up", data-aos-delay="100", style="color: floralwhite;")
+                        | We are happy to have you here!
+                      .d-flex(data-aos="fade-up", data-aos-delay="200")
+                    .col-lg-5.order-1.order-lg-2.hero-img(data-aos="zoom-out")
+                      img.img-fluid.animated(src="assets/img/produce/home.jpg", alt=)
+              // /Hero Section
+              // Menu Section
+              section#menu.menu.section
+                // Section Title
+                .container.section-title(data-aos="fade-up")
+                  h2 Our product lists
+                  p
+                    span check our
+                    span.description-title HHGstore products
+                // End Section Title
+                .container
+                  ul.nav.nav-tabs.d-flex.justify-content-center(data-aos="fade-up", data-aos-delay="100")
+                    li.nav-item
+                      a.nav-link.active.show(data-bs-toggle="tab", data-bs-target="#menu-starters")
+                        h4 Cereals
+                    // End tab nav item
+                    li.nav-item
+                      .tab-content(data-aos="fade-up", data-aos-delay="200")
+                        #menu-starters.tab-pane.fade.active.show
+                          .tab-header.text-center
+                            p Cereals
+                            h3 products
+                          .row.gy-5
+                            // image src change images
+                            .col-lg-4.menu-item
+                              img.menu-img.img-fluid(src="assets/img/produce/Beans.jpg", alt=)
+                              h4 Beans
+                              p.qunatity
+                                | 595 Tonnes
+                            // Menu Item
+                            .col-lg-4.menu-item
+                              img.menu-img.img-fluid(src="assets/img/produce/Maize.jpg", alt=)
+                              h4 Grain-maize
+                              p.qunatity
+                                | 1495Tonnes
+                            // Menu Item
+                            .col-lg-4.menu-item
+                              img.menu-img.img-fluid(src="assets/img/produce/Cowpeas.jpg", alt=)
+                              h4 Cowpeas
+                              p.qunatity
+                                | 895Tonnes
+                            // Menu Item
+                            .col-lg-4.menu-item
+                              img.menu-img.img-fluid(src="assets/img/produce/G-nuts.jpg", alt=)
+                              h4 G-nuts
+                              p.qunatity
+                                | 1295Tonnes
+                            // Menu Item
+                            .col-lg-4.menu-item
+                              img.menu-img.img-fluid(src="assets/img/produce/rice.jpg", alt=)
+                              h4 Rice
+                              p.qunatity
+                                | 1296Tonnes
+                            // Menu Item
+                            .col-lg-4.menu-item
+                              img.menu-img.img-fluid(src="assets/img/produce/Soybeans.jpg", alt=)
+                              h4 Soybeans
+                              p.qunatity
+                                | 995Tonnes
+                            // Menu Item
+                            footer#footer.footer.dark-background
+                              .container
+                                .row.gy-3
+                                  .col-lg-3.col-md-6.d-flex
+                                    i.bi.bi-geo-alt.icon
+                                    .address
+                                      h4 Address
+                                      p Maganjo
+                                      p Matuuga
+                                      p
+                                  .col-lg-3.col-md-6.d-flex
+                                    i.bi.bi-telephone.icon
+                                    div
+                                      h4 Contact
+                                      p
+                                        strong Phone:
+                                        span +256753456436
+                                        br
+                                        strong Email:
+                                        span info@example.com
+                                        br
+                                  .col-lg-3.col-md-6.d-flex
+                                    i.bi.bi-clock.icon
+                                    div
+                                      h4 Opening Hours
+                                      p
+                                        strong Mon-Sat:
+                                        span 07AM - 09PM
+                                        br
+                                        strong Sunday
+                                        | :
+                                        span Closed
+                                  .container.copyright.text-center.mt-4
+                                    p © 
+                                      span Copyright
+                                      strong.px-1.sitename HHG-2024
+                                      span
+                                        | All Rights
+                                        | Reserved
+                                    .credits
+                                      // All the links in the footer should remain intact.
+                                      // You can delete the links only if you've purchased the pro version.
+                                      // Licensing information: https://bootstrapmade.com/license/
+                                      // Purchase the pro version with working PHP/AJAX contact form: [buy-url]
+                                      | Designed by
+                                      a(href="https://bootstrapmade.com/") Musasizi Joseph
+                                  // Scroll Top
+                                  a#scroll-top.scroll-top.d-flex.align-items-center.justify-content-center(href="#")
+                                    i.bi.bi-arrow-up-short
+                                  // Preloader
+                                  #preloader
+                                  // Vendor JS Files
+                                  script(src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js")
+                                  script(src="assets/vendor/php-email-form/validate.js")
+                                  script(src="assets/vendor/aos/aos.js")
+                                  script(src="assets/vendor/glightbox/js/glightbox.min.js")
+                                  script(src="assets/vendor/purecounter/purecounter_vanilla.js")
+                                  script(src="assets/vendor/swiper/swiper-bundle.min.js")
+                                  // Main JS File
+                                  script(src="assets/js")
