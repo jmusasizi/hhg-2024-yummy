@@ -1,0 +1,64 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title All-users-page
+    link(rel="stylesheet", href="assets/css/all-user.css")
+  body
+    header
+      nav
+        ul
+          li
+            a(href="index.html") Home
+          li
+            a(href="Stock.html") Stocks
+          li
+            a(href="user.html") All-user-Page
+          li
+            a(href="Logout.html") Logout
+    main
+      section#user-profile
+        h2 User Profile
+        .profile-details
+          img.profile-pic(src="assets/img/produce/home.jpg", alt="User Profile Picture")
+          .info
+            p
+              strong Name:
+              | Jordan musasizi
+            p
+              strong Email:
+              | jordanm@gmail.com
+            p
+              strong Address:
+              | maganjo
+          button Edit Profile
+      section#order-history
+        h2 Order History
+        table
+          thead
+            tr
+              th Order ID
+              th Date
+              th Total
+              th Status
+          tbody
+            tr
+              td #12345
+              td 2024-08-01
+              td 50000Tonnes
+              td Delivered
+            tr
+              td #12346
+              td 2024-08-15
+              td 7500Tonnes
+              td Pending
+      section#stock-list
+        h2 Stock-List
+        ul
+          li G-nunts
+          li Beans
+          li Soybeans
+          li Cowpeas
+        button Add user
+    footer

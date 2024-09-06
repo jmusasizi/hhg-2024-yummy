@@ -1,0 +1,44 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Edit Sales - Happy Hoe Grocery Store
+    link(rel="stylesheet", href="assets/css/edit-sales.css")
+  body
+    header
+      .logo Happy Hoe Grocery Store
+      nav
+        ul
+          li
+            a(href="index.html") Home
+          li
+            a(href="stocklist.html") Stock List
+          li
+            a(href="sales.html") Sales
+          li
+            a(href="logout.html") Logout
+    section.edit-sales-section
+      h2 Edit Sales Item
+      form.edit-sales-form
+        .form-group
+          label(for="product-name") Product Name:
+          input#product-name(type="text", name="product-name", value="Maize", required)
+        .form-group
+          label(for="product-image") Product Image:
+          input#product-image(type="file", name="product-image")
+          img.current-image(src="assets/img/produce/Maize.jpg", alt="Maize")
+        .form-group
+          label(for="buying-price") Buying Price (UGX per kg):
+          input#buying-price(type="number", name="buying-price", value="5000", required)
+        .form-group
+          label(for="selling-price") Selling Price (UGX per kg):
+          input#selling-price(type="number", name="selling-price", value="6000", required)
+        .form-group
+          label(for="description") Description:
+          textarea#description(name="description", rows="4") Fresh maize, rich in nutrients and locally sourced.
+        .form-buttons
+          button.save-btn(type="submit") Save Changes
+          button.cancel-btn(type="reset") Cancel
+    footer
+      p &amp;copy; 2024 Happy Hoe Grocery Store. All rights reserved.

@@ -5,12 +5,12 @@ const router = express.Router();
 const Signup = require("../models/signup");
 
 //Signup Routes
-router.get("/signup-page", (req, res) => {
+router.get("/register", (req, res) => {
   res.render("signup");
 });
 
 // add new user
-router.post("/signup-page", async (req, res) => {
+router.post("/register", async (req, res) => {
   try {
     // check if user already exists
     const existingUser = await Signup.findOne({ email: req.body.email }); // check if the user already exist
@@ -26,7 +26,7 @@ router.post("/signup-page", async (req, res) => {
       if (err) {
         throw err;
       }
-      res.redirect("/login-page");
+      res.redirect("/login");
     });
 
   } catch (err) {
@@ -37,12 +37,12 @@ router.post("/signup-page", async (req, res) => {
 
 
 // Login Routes
-router.get("/login-page", (req, res) => {
+router.get("/login", (req, res) => {
     res.render("login");
   });
   
   // Route to handle login
-  router.post("/login-page", passport.authenticate("local", { failureRedirect: "/login-page" }),
+  router.post("/login", passport.authenticate("local", { failureRedirect: "/login" }),
     (req, res) => {
       req.session.user = req.user; // Assign session to the logged-in user
   

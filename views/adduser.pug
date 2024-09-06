@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Add User
+    link(rel="stylesheet", href="assets/css/adduser.css")
+  body
+    .container
+      h1 Add New User
+      form(action="#", method="POST")
+        .form-group
+          label(for="fullName") Full Name:
+          input#fullName(type="text", name="fullName", required)
+        .form-group
+          label(for="email") Email:
+          input#email(type="email", name="email", required)
+        .form-group
+          label(for="role") Role:
+          select#role(name="role", required)
+            option(value="admin") Admin
+            option(value="manager") Manager
+            option(value="salesagent") Sales agent
+        .form-group
+          label(for="password") Password:
+          input#password(type="password", name="password", required)
+        .form-group
+          label(for="confirmPassword") Confirm Password:
+          input#confirmPassword(type="password", name="confirmPassword", required)
+        .form-group
+          button(type="submit") Add User

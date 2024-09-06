@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Admin Dashboard
+    link(rel="stylesheet", href="assets/css/admin-dashboard.css")
+  body
+    // Sidebar
+    .sidebar
+      h2 Admin Panel
+      ul
+        li
+          a(href="#") Dashboard
+        li
+          a(href="#") Users
+        li
+          a(href="#") Register
+        li
+          a(href="#") logout
+    // Main Content
+    .main-content
+      // Header
+      header
+        h1 Dashboard
+        .user-info
+          span Admin
+          img(src="user-avatar.png", alt="User Avatar")
+      // Dashboard Content
+      .dashboard
+        .card Stock-list
+        .card Saleslist
+        .card Creditsaleslist
+    // Footer
+    footer
+      p © 2024 Admin Dashboard

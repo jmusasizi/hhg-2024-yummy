@@ -18,10 +18,7 @@ const signupSchema = new mongoose.Schema({
         type: String,
         trim:true,
     },
-    // password:{
-    //     type: String,
-    //     trim:true,
-    // },
+    
 });
 signupSchema.plugin(passportLocalMongoose, {
     usernameField: "email",

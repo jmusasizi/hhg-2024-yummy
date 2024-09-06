@@ -1,0 +1,61 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Credit Sales - Happy Hoe Grocery Store
+    link(rel="stylesheet", href="assets/css/creditsaleslist.css")
+  body
+    header
+      .logo Happy Hoe Grocery Store
+      nav
+        ul
+          li
+            a(href="index.html") Home
+          li
+            a(href="stocklist.html") Stock List
+          li
+            a(href="sales.html") Sales
+          li
+            a(href="credit-sales.html") Credit Sales
+          li
+            a(href="logout.html") Logout
+    section.credit-sales-section
+      h2 Credit Sales List
+      table.credit-sales-table
+        thead
+          tr
+            th Customer Name
+            th Product
+            th Quantity
+            th Total Price (UGX)
+            th Amount Paid (UGX)
+            th Balance (UGX)
+            th Payment Date
+            th Actions
+        tbody
+          tr
+            td Jordan Musasizi
+            td Maize
+            td 50 kg
+            td 300,000
+            td 200,000
+            td 100,000
+            td 2024-08-15
+            td
+              button.payment-btn Record Payment
+              button.edit-btn Edit
+          tr
+            td Jane Namambo
+            td Beans
+            td 30 kg
+            td 210,000
+            td 100,000
+            td 110,000
+            td 2024-08-10
+            td
+              button.payment-btn Record Payment
+              button.edit-btn Edit
+          // Additional credit sales records can be added here
+    footer
+      p &amp;copy; 2024 Happy Hoe Grocery Store. All rights reserved.

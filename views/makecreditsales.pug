@@ -1,0 +1,51 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Make Credit Sales
+    link(rel="stylesheet", href="assets/css/makecreditsales.css")
+  body
+    header.header
+      h1 Happy Hoe Grocery Store Credit Sales
+      nav.navbar
+        a(href="sales-agent-dashboard.html") sales-agent-dashboard
+        a(href="stockdetails.html") stock
+        a(href="makesales.html") Make Sales
+        a(href="makecreditsales.html") Make Credit Sales
+        a(href="#logout") Logout
+    main.main-content
+      section.credit-sales-form
+        h2 Record a Credit Sale
+        form(action="#", method="POST")
+          label(for="customer-name") Customer Name:
+          input#customer-name(type="text", name="customer-name", required)
+          label(for="customer-contact") Customer Contact:
+          input#customer-contact(type="text", name="customer-contact", required)
+          label(for="item") product Name:
+          input#item(type="text", name="item", required)
+          label(for="quantity") Quantity:
+          input#quantity(type="number", name="quantity", required)
+          label(for="price") Price per kg (ugx):
+          input#price(type="number", name="price", step="0.01", required)
+          label(for="total") Total Amount (ugx):
+          input#total(type="number", name="total", step="0.01", readonly)
+          label(for="due-date") Due Date:
+          input#due-date(type="date", name="due-date", required)
+          button(type="submit") Submit Credit Sale
+    footer.footer
+      p &amp;copy; 2024 Grocery Store. All rights reserved.
+    script.
+      // JavaScript to automatically calculate the total amount
+      const quantityInput = document.getElementById('quantity');
+      const priceInput = document.getElementById('price');
+      const totalInput = document.getElementById('total');
+      
+      function calculateTotal() {
+      const quantity = parseFloat(quantityInput.value) || 0;
+      const price = parseFloat(priceInput.value) || 0;
+      totalInput.value = (quantity * price).toFixed(2);
+      }
+      
+      quantityInput.addEventListener('input', calculateTotal);
+      priceInput.addEventListener('input', calculateTotal);

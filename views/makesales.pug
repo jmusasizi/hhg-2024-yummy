@@ -1,0 +1,44 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Make Sales
+    link(rel="stylesheet", href="assets/css/makesales.css")
+  body
+    header.header
+      h1 Happy Hoe Grocery Store Sales
+      nav.navbar
+        a(href="yummy/sales-agent-dashboard.html") Sales-agent-dashboard
+        a(href="yummy/stocklist.html") Stock
+        a(href="yummy/makesale.html") Make Sales
+        a(href="logout.html") Logout
+    main.main-content
+      section.sales-form
+        h2 Record a Sale
+        form(action="#", method="POST")
+          label(for="item") productName:
+          input#item(type="text", name="item", required)
+          label(for="quantity") Quantity:
+          input#quantity(type="number", name="quantity", required)
+          label(for="price") Price per kg (ugx):
+          input#price(type="number", name="price", step="0.01", required)
+          label(for="total") Total Amount (ugx):
+          input#total(type="number", name="total", step="0.01", readonly)
+          button(type="submit") Submit Sale
+    footer.footer
+      p &amp;copy; 2024 Grocery Store. All rights reserved.
+    script.
+      // JavaScript to automatically calculate the total amount
+      const quantityInput = document.getElementById('quantity');
+      const priceInput = document.getElementById('price');
+      const totalInput = document.getElementById('total');
+      
+      function calculateTotal() {
+      const quantity = parseFloat(quantityInput.value) || 0;
+      const price = parseFloat(priceInput.value) || 0;
+      totalInput.value = (quantity * price).toFixed(2);
+      }
+      
+      quantityInput.addEventListener('input', calculateTotal);
+      priceInput.addEventListener('input', calculateTotal);

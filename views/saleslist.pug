@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Sales List - page
+    link(rel="stylesheet", href="assets/css/saleslist.css")
+  body
+    header
+      .logo Happy Hoe Grocery Store
+      nav
+        ul
+          li
+            a(href="index.html") Home
+          li
+            a(href="stocklist.html") stocklist
+          li
+            a(href="sales.html") Sales
+          li
+            a(href="logout.html") logout
+    section.sales-section
+      h2 saleslist
+      .sales-grid
+        .sales-item
+          img(src="assets/img/produce/Maize.jpg", alt="maize")
+          h3 maize
+          p.buying-price 5000ug per kg
+          p.selling-price 6000ug per kg
+          button Add to Cart
+        .sales-item
+          img(src="assets/img/produce/Beans.jpg", alt="Beans")
+          h3 Beans
+          p.buying-price 6000ug per kg
+          p.selling-price 7000ug per kg
+          button Add to Cart
+        // Add more sales items as needed
+    footer
+      p &amp;copy; 2024 HHG Store. All rights reserved.

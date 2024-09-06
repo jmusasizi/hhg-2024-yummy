@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Edit Credit Sales
+    link(rel="stylesheet", href="assets/css/editcreditsales.css")
+  body
+    .container
+      h2 Edit Credit Sales
+      form(action="/update-credit-sale", method="POST")
+        .form-group
+          label(for="sale-id") Sale ID:
+          input#sale-id(type="text", name="sale-id", placeholder="Enter Sale ID", required)
+        .form-group
+          label(for="customer-name") Customer Name:
+          input#customer-name(type="text", name="customer-name", placeholder="Enter Customer Name", required)
+        .form-group
+          label(for="sale-date") Sale Date:
+          input#sale-date(type="date", name="sale-date", required)
+        .form-group
+          label(for="total-amount") Total Amount:
+          input#total-amount(type="number", name="total-amount", placeholder="Enter Total Amount", required)
+        .form-group
+          label(for="paid-amount") Paid Amount:
+          input#paid-amount(type="number", name="paid-amount", placeholder="Enter Paid Amount", required)
+        .form-group
+          label(for="balance-amount") Balance Amount:
+          input#balance-amount(type="number", name="balance-amount", placeholder="Enter Balance Amount", required)
+        .form-group
+          label(for="due-date") Due Date:
+          input#due-date(type="date", name="due-date", required)
+        button.btn(type="submit") Update Sale
