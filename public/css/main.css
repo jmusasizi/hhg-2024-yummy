@@ -448,7 +448,7 @@ body{
       margin: 0;
       border-radius: 6px;
       background-color: var(--nav-mobile-background-color);
-      border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+      border: 1wwwpx solid color-mix(in srgb, var(--default-color), transparent 90%);
       box-shadow: none;
       overflow-y: auto;
       transition: 0.3s;

@@ -5,7 +5,7 @@ const connectEnsureLogin = require("connect-ensure-login");
 // home route
 router.get("/", (req, res) => {
   // res.send("Welcome to HHG Management System");
-  res.render("index");
+  res.render("indexwww");
 });
 
 // manager route
