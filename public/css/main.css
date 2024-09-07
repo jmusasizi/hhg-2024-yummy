@@ -1569,8 +1569,8 @@ body{
     transition: all 0.3s ease-in-out;
     border-radius: 50%;
     margin-right: 15px;
-  }
-  
+ }
+
   .contact .info-item h3 {
     font-size: 20px;
     font-weight: 700;
@@ -1648,9 +1648,5 @@ body{
     background: color-mix(in srgb, var(--accent-color), transparent 20%);
   }
   
-  /*--------------------------------------------------------------
-  # Starter Section Section
-  --------------------------------------------------------------*/
-  .starter-section {
-    /* Add your styles here */
-  }
+  
+  
