@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
-const creditsalesSchema = new mongoose.Schema({
-    stocksname: {
+const salesSchema = new mongoose.Schema({
+    salesname: {
         type: String,
         trim: true,
     },
-    creditsalestype: {
+    salestype: {
         type: String,  // Use 'String' with an uppercase 'S'
         trim: true,
     },
@@ -13,11 +13,11 @@ const creditsalesSchema = new mongoose.Schema({
         type: Number,
         trim:true,
     },
-    amountdue:{
+    cost:{
         type: Number,
         trim:true,
     },
-    buyername:{
+    dealer:{
         type: String,
         trim:true,
     },
@@ -25,29 +25,14 @@ const creditsalesSchema = new mongoose.Schema({
         type: String,
         trim:true,
     },
-    location:{
-        type: String,
-        trim:true,
-    },
-    nationalid :{
-        type: String,
-        trim:true,
-    },
     contact:{
         type: String,
         trim:true,
     },
-    duedate:{
-        type: String,
-        trim:true,
-    },
-    dateofdispatch:{
-        type: String,
-        trim:true,
-    },
-    receipt:{
-        type: String,
+    sellingprice:{
+        type: Number,
         trim:true,
     },
 });
-module.exports = mongoose.model('Creditsales', creditsalesSchema);
+
+module.exports = mongoose.model('Sales', salesSchema);
