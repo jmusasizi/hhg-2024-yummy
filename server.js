@@ -20,7 +20,7 @@ const Signup = require("./models/signup");
 const userRoutes = require("./routes/userRoutes");
 const authRoutes = require("./routes/authRoutes");
 const pageRoutes = require("./routes/pageRoutes");
-// const stockRoutes = require("./routes/stockRoutes");
+const stockRoutes = require("./routes/stockRoutes");
 // const creditsalesRoutes = require("./routes/creditsalesRoutes");
 
 // instantiations

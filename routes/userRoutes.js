@@ -24,7 +24,7 @@ router.get("/all-users-page", connectEnsureLogin.ensureLoggedIn(), async (req, r
 router.get("/update-user-page/:id", async (req, res) => {
   try {
     const dbUser = await signup.findOne({ _id: req.params.id });
-    res.render("update-user", {
+    res.render("updateuser", {
       user: dbUser,
     });
   } catch (err) {
@@ -32,7 +32,7 @@ router.get("/update-user-page/:id", async (req, res) => {
   }
 });
 
-router.post("/update-user-page", async (req, res) => {
+router.post("/updateuser-page", async (req, res) => {
   try {
     await signup.findOneAndUpdate({ _id: req.query.id }, req.body);
     res.redirect("/all-users-page");

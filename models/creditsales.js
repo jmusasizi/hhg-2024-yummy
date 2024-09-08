@@ -30,19 +30,19 @@ const creditsalesSchema = new mongoose.Schema({
         trim:true,
     },
     nationalid :{
-        type: String,
+        type: Number,
         trim:true,
     },
     contact:{
-        type: String,
+        type: Number,
         trim:true,
     },
     duedate:{
-        type: String,
+        type: Number,
         trim:true,
     },
     dateofdispatch:{
-        type: String,
+        type: Number,
         trim:true,
     },
     receipt:{
