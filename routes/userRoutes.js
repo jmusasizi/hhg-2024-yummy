@@ -9,7 +9,7 @@ router.get("/all-users-page", connectEnsureLogin.ensureLoggedIn(), async (req, r
   try {
     if (req.session.user.role === "manager") { // ensure that only managers access all-users page
       const allUsers = await signup.find().sort({ $natural: -1 });
-      res.render("all-users", {
+      res.render("all-user", {
         users: allUsers,
       });
     }else {

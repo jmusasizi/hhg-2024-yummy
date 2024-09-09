@@ -6,7 +6,7 @@ const Stock = require("../models/stock");
 
 // Add New Stock
 router.get("/add-stock-page", (req, res) => {
-  res.render("add-stock");
+  res.render("addstock");
 });
 
 router.post("/add-stock-page", async (req, res) => {
@@ -29,7 +29,7 @@ router.get(
       if (req.session.user.role === "manager") {
         // ensure that only managers access all-users page
         const allStock = await Stock.find().sort({ $natural: -1 });
-        res.render("stock-list", {
+        res.render("stocklist", {
           stock: allStock,
         });
       } else {

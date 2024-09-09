@@ -45,7 +45,7 @@ body{
   }
   
   .dark-background {
-    --background-color: #1f1f24;
+    --background-color: green;
     --default-color: #ffffff;
     --heading-color: #ffffff;
     --surface-color: #37373f;
@@ -798,6 +798,7 @@ body{
   --------------------------------------------------------------*/
   .hero {
     width: 100%;
+    max-width: 500em;
     min-height: 60vh;
     position: relative;
     padding: 60px 0;
@@ -1648,5 +1649,11 @@ body{
     background: color-mix(in srgb, var(--accent-color), transparent 20%);
   }
   
+
+
+  #fluid{
+    border-radius: 50%;
+    border: 1px solid white;
+  }
   
   

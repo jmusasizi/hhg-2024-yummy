@@ -65,7 +65,7 @@ passport.deserializeUser(Signup.deserializeUser()); // the serial number is dest
 app.use("/", userRoutes);
 app.use("/", authRoutes);
 app.use("/", pageRoutes);
-// app.use("/", stockRoutes);
+app.use("/", stockRoutes);
 // app.use("/", creditsalesRoutes);
 app.get("*", (req, res) => {
   res.send("Error! This page does not exist");

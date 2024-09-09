@@ -59,14 +59,17 @@ body {
   /* Go Back Link Styles */
   a {
     display: block;
-    margin-top: 20px;
+    margin-bottom: 600px;
+    margin-right: 50px;
     text-align: center;
+    position: absolute;
     color: #007bff;
     text-decoration: none;
   }
   
   a:hover {
-    text-decoration: underline;
+   color: black;
+   font-weight: bolder;
   }
   
   /* Media Queries for Responsiveness */

@@ -1,14 +1,12 @@
-
-<npndoctype>html</npndoctype>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Add Stock</title>
-    <Link rel="stylesheet" href="assets/css/addstock.css++">    </Link>
+    <Link rel="stylesheet" href="assets/css/addstock.css">    </Link>
   </head>
   <body>
-    <h2>Add New Stock</h2>
     <form action="/add-stock-page" method="POST">
       <input type="text" name="stockname" placeholder="Stock Name"/>
       <select name="stocktype">
@@ -26,7 +24,8 @@
         <option value="matuga">Matuga        </option>
       </select>
       <input type="text" name="contact" placeholder="Dealer's Contact"/>
-      <input type="submit" value="Add Stock"/>
-    </form><a href="/all-stock-page">Go Back To Stock List Page.</a>
+      <input type="submit" value="Add New Stock"/>
+    </form>
+    <a href="/all-stock-page">Go Back To Stock List Page.</a>
   </body>
 </html>

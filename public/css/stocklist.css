@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: peachpuff;
+    background-color: aliceblue;
     margin: 0;
     padding: 0;
 }
@@ -36,7 +36,7 @@ th, td {
 }
 
 th {
-    background-color:gold;
+    background-color:rgb(63, 139, 63);
     color: white;
 }
 

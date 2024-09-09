@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Sales - Happy Hoe Grocery Store</title>
+    <link rel="stylesheet" href="assets/css/creditsaleslist.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Happy Hoe Grocery Store</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="stocklist.html">Stock List</a></li>
+                <li><a href="sales.html">Sales</a></li>
+                <li><a href="credit-sales.html">Credit Sales</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="credit-sales-section">
+        <h2>Credit Sales List</h2>
+        <table class="credit-sales-table">
+            <thead>
+                <tr>
+                    <th>Customer Name</th>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Total Price (UGX)</th>
+                    <th>Amount Paid (UGX)</th>
+                    <th>Balance (UGX)</th>
+                    <th>Payment Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jordan Musasizi</td>
+                    <td>Maize</td>
+                    <td>50 kg</td>
+                    <td>300,000</td>
+                    <td>200,000</td>
+                    <td>100,000</td>
+                    <td>2024-08-15</td>
+                    <td>
+                        <button class="payment-btn">Record Payment</button>
+                        <button class="edit-btn">Edit</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jane Namambo</td>
+                    <td>Beans</td>
+                    <td>30 kg</td>
+                    <td>210,000</td>
+                    <td>100,000</td>
+                    <td>110,000</td>
+                    <td>2024-08-10</td>
+                    <td>
+                        <button class="payment-btn">Record Payment</button>
+                        <button class="edit-btn">Edit</button>
+                    </td>
+                </tr>
+                <!-- Additional credit sales records can be added here -->
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Happy Hoe Grocery Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,5 +1,5 @@
 body {
-  background-image: url('../img/gallery/gallery-2.jpgg')
+  background-image: url('/image/login.jpg')
 }
 
 
@@ -10,7 +10,7 @@ body {
 
 .button {
 
-  color: white;
+  color:lightsalmon;
   background-color: red;
   padding: 5px;
 
@@ -76,13 +76,13 @@ body {
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-image: url(/pexels-alexasfotos-6932338.jpg);
-  --surface-color: #ffffff;
+  --background-image: url(/image/logout.jpg);
+  --surface-color: pink;
 }
 
 .dark-background {
-  --background-color: #1f1f24;
-  --default-color: #ffffff;
+  --background-color:green;
+  --default-color: gold;
   --heading-color: #ffffff;
   --surface-color: #37373f;
   --contrast-color: #ffffff;
@@ -290,7 +290,7 @@ h6 {
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
   color: var(--contrast-color);
-  background: var(--accent-color);
+  background: gold;
   font-size: 14px;
   padding: 8px 26px;
   margin: 0;
@@ -383,7 +383,7 @@ h6 {
     height: 2px;
     bottom: -6px;
     left: 0;
-    background-color: var(--nav-hover-color);
+    background-color: yellowgreen;
     visibility: hidden;
     width: 0px;
     transition: all 0.3s ease-in-out 0s;
@@ -1064,7 +1064,7 @@ section,
 }
 
 .why-us .icon-box:hover i {
-  color: var(--contrast-color);
+  color: powderblue;
   background: var(--accent-color);
 }
 
