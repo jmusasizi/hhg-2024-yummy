@@ -6,7 +6,7 @@ const creditsales= require("../models/creditsales");
 
 // Add New creditsales
 router.get("/add-creditsales-page", (req, res) => {
-  res.render("add-creditsales");
+  res.render("addcreditsales");
 });
 
 router.post("/add-creditsales-page", async (req, res) => {
@@ -28,7 +28,7 @@ router.get(
     try {
       if (req.session.user.role === "manager") {
         // ensure that only managers access all-users page
-        const allcreditsales = await Stock.find().sort({ $natural: -1 });
+        const allcreditsales = await Creditsales.find().sort({ $natural: -1 });
         res.render("stock-list", {
           creditsales: allcreditsales,
         });
@@ -53,10 +53,10 @@ router.get("/update-creditsales-page/:id", async (req, res) => {
   }
 });
 
-router.post("/update-stock-page", async (req, res) => {
+router.post("/update-creditsales-page", async (req, res) => {
   try {
     await Stock.findOneAndUpdate({ _id: req.query.id }, req.body);
-    res.redirect("/all-creditsales-page");
+    res.redirect("/creditsales-page");
   } catch (err) {
     res.status(404).send("Unable to update creditsales in the database");
   }
