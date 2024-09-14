@@ -4,10 +4,10 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Edit Stock
-    Link(rel="stylesheet" href="/css/forms.css")     
-  body
-    h2 Edit Stock Details
-    form(action="/update-stock-page?id"+stockItem._id method="POST")
+    Link(rel="stylesheet" href="/css/addstock.css")     
+  body(style="background-color:lightgreen")
+    h2(style="position:absolute;top:-10px") Edit Stock Details
+    form(action="/update-stock-page?id"+stockItem._id method="POST" style="background-color:wheat")
       input(type="text" name="stockname" placeholder="Stock Name" value=stockItem.stockname)
       select(name="stocktype")
         option(value="" disabled selected) Select a Stock Type
@@ -23,5 +23,5 @@ html(lang="en")
         option(value="matuga" selected = stockItem.storagebranch === "matuga") Matuga        
       input(type="text" name="contact" placeholder="Dealer's Contact" value=stockItem.contact)
       input(type="submit" value="Save Changes")
-    a(href="/stock-list-page") Go Back To Stock List Page.
+    a(href="/stock-list-page" style="position:absolute;bottom:-600px;font-size:1.5em") Go Back To Stock List Page.
 

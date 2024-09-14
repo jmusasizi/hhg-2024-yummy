@@ -23,7 +23,7 @@ router.post("/add-stock-page", async (req, res) => {
 // all stock
 router.get(
   "/all-stock-page",
-  connectEnsureLogin.ensureLoggedIn(),
+  // connectEnsureLogin.ensureLoggedIn()
   async (req, res) => {
     try {
       if (req.session.user.role === "manager") {
@@ -36,7 +36,7 @@ router.get(
         res.send("Only Managers are allowed to access this page");
       }
     } catch (error) {
-      res.status(400).send("Unable to find stock in your database", error);
+      res.status(400).send("Unable to find stock in your database");
     }
   }
 );
@@ -45,7 +45,7 @@ router.get(
 router.get("/update-stock-page/:id", async (req, res) => {
   try {
     const dbStock = await Stock.findOne({ _id: req.params.id });
-    res.render("update-stock", {
+    res.render("updatestock", {
       stockItem: dbStock,
     });
   } catch (err) {
