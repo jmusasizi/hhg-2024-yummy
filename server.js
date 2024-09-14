@@ -21,7 +21,7 @@ const userRoutes = require("./routes/userRoutes");
 const authRoutes = require("./routes/authRoutes");
 const pageRoutes = require("./routes/pageRoutes");
 const stockRoutes = require("./routes/stockRoutes");
-// const creditsalesRoutes = require("./routes/creditsalesRoutes");
+ const salesRoutes = require("./routes/salesRoutes");
 
 // instantiations
 const app = express();
@@ -66,7 +66,7 @@ app.use("/", userRoutes);
 app.use("/", authRoutes);
 app.use("/", pageRoutes);
 app.use("/", stockRoutes);
-// app.use("/", creditsalesRoutes);
+app.use("/", salesRoutes);
 app.get("*", (req, res) => {
   res.send("Error! This page does not exist");
 });

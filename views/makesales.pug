@@ -4,7 +4,7 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Make Sales
-    link(rel="stylesheet", href="assets/css/makesales.css")
+    link(rel="stylesheet", href="/css/makesales.css")
   body
     header.header
       h1 Happy Hoe Grocery Store Sales
@@ -16,7 +16,7 @@ html(lang="en")
     main.main-content
       section.sales-form
         h2 Record a Sale
-        form(action="#", method="POST")
+        form(action="/add-sales-page", method="POST")
           label(for="item") productName:
           input#item(type="text", name="item", required)
           label(for="quantity") Quantity:
