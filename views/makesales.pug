@@ -9,16 +9,16 @@ html(lang="en")
     header.header
       h1 Happy Hoe Grocery Store Sales
       nav.navbar
-        a(href="yummy/sales-agent-dashboard.html") Sales-agent-dashboard
-        a(href="yummy/stocklist.html") Stock
-        a(href="yummy/makesale.html") Make Sales
-        a(href="logout.html") Logout
+        a(href="/sales-agent-dashboard-page") Sales-agent-dashboard
+        a(href="/all-stock-page") Stock
+        a(href="/add-sales-page") Make Sales
+        a(href="/LOGOUT") Logout
     main.main-content
       section.sales-form
         h2 Record a Sale
         form(action="/add-sales-page", method="POST")
           label(for="item") productName:
-          input#item(type="text", name="item", required)
+          input#item(type="text", name="producename", required)
           label(for="quantity") Quantity:
           input#quantity(type="number", name="quantity", required)
           label(for="price") Price per kg (ugx):

@@ -2,11 +2,11 @@ const express = require("express");
 const router = express.Router();
 const connectEnsureLogin = require("connect-ensure-login");
 
-const creditsales= require("../models/makecreditsales");
+const creditsales= require("../models/creditsales");
 
 // Add New creditsales
 router.get("/add-creditsales-page", (req, res) => {
-  res.render("addcreditsales");
+  res.render("makecreditsales");
 });
 
 router.post("/add-creditsales-page", async (req, res) => {
@@ -36,7 +36,7 @@ router.get(
         res.send("Only Managers are allowed to access this page");
       }
     } catch (error) {
-      res.status(400).send("Unable to find stock in your database", error);
+      res.status(400).send("Unable to find stock in your database");
     }
   }
 );

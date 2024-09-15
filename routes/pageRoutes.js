@@ -16,7 +16,7 @@ router.get("/manager-dashboard-page", connectEnsureLogin.ensureLoggedIn(), (req,
 });
 
 // sales agent route
-router.get("/sales-agent-dashboard-page", connectEnsureLogin.ensureLoggedIn(), (req, res) => {
+router.get("/sales-agent-dashboard-page", (req, res) => {
   // res.send("Welcome to HHG Management System");
   res.render("sales-agent-dashboard");
 });

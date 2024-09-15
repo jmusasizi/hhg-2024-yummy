@@ -22,7 +22,7 @@ const authRoutes = require("./routes/authRoutes");
 const pageRoutes = require("./routes/pageRoutes");
 const stockRoutes = require("./routes/stockRoutes");
  const salesRoutes = require("./routes/salesRoutes");
-
+const makecreditsales =require('./routes/makecreditsalesRoutes')
 // instantiations
 const app = express();
 const port = 3002;
@@ -67,6 +67,7 @@ app.use("/", authRoutes);
 app.use("/", pageRoutes);
 app.use("/", stockRoutes);
 app.use("/", salesRoutes);
+app.use('/',makecreditsales);
 app.get("*", (req, res) => {
   res.send("Error! This page does not exist");
 });
