@@ -5,48 +5,81 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Make Credit Sales
     link(rel="stylesheet", href="/css/upadecreditsales.css")
-    
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css")
+
   body
     header.header
       h1 Happy Hoe Grocery Store Credit Sales
       nav.navbar
-        a(href="sales-agent-dashboard.html") sales-agent-dashboard
-        a(href="stockdetails.html") stock
-        a(href="makesales.html") Make Sales
-        a(href="makecreditsales.html") Make Credit Sales
-        a(href="#logout") Logout
+        a(href="/sales-agent/dashboard") Sales Agent Dashboard
+        a(href="/add-stock-page") Stock
+        a(href="/add-sales-page") Make Sales
+        a(href="/add-creditsales-page") Make Credit Sales
+        a(href="/logout") Logout
+
     main.main-content
       section.credit-sales-form
         h2 Record a Credit Sale
-        form(action="#", method="POST")
-          label(for="customer-name") Customer Name:
-          input#customer-name(type="text", name="customer-name", required)
-          label(for="customer-contact") Customer Contact:
-          input#customer-contact(type="text", name="customer-contact", required)
-          label(for="item") product Name:
-          input#item(type="text", name="item", required)
-          label(for="quantity") Quantity:
-          input#quantity(type="number", name="quantity", required)
-          label(for="price") Price per kg (ugx):
-          input#price(type="number", name="price", step="0.01", required)
-          label(for="total") Total Amount (ugx):
-          input#total(type="number", name="total", step="0.01", readonly)
-          label(for="due-date") Due Date:
-          input#due-date(type="date", name="due-date", required)
-          button(type="submit") Submit Credit Sale
+        form(action="#", method="POST" class="row g-3")
+          
+          .col-md-6
+            label(for="customer-name") Customer Name:
+            input#customer-name.form-control(type="text", name="customername", required)
+
+            label(for="customer-contact") Customer Contact:
+            input#customer-contact.form-control(type="text", name="customercontact", required)
+
+            label(for="item") Product Name:
+            input#item.form-control(type="text", name="productname", required)
+
+            label(for="nationalid") National ID:
+            input#nationalid.form-control(type="text", name="nationalId", required)
+
+            label(for="location") Location:
+            input#location.form-control(type="text", name="location", required)
+
+         
+          .col-md-6
+            label(for="quantity") Quantity:
+            input#quantity.form-control(type="number", name="quantity", required)
+
+            label(for="dateofdispatch") Date of Dispatch:
+            input#dateofdispatch.form-control(type="date", name="dateofdispatch", required)
+
+            label(for="price") Price per kg (UGX):
+            input#price.form-control(type="number", name="price", step="0.01", required)
+
+            label(for="total") Total Amount (UGX):
+            input#total.form-control(type="number", name="total", step="0.01", readonly)
+
+            label(for="due-date") Due Date:
+            input#due-date.form-control(type="date", name="duedate", required)
+
+            label(for="storagebranch") Storage Branch:
+            select.form-select(name="storagebranch", required)
+              option(value="" disabled selected) Select Storage Branch
+              option(value="maganjo") Maganjo
+              option(value="matuga") Matuga
+
+         
+          .col-12
+            button(type="submit", class="btn btn-primary") Submit Credit Sale
+
     footer.footer
-      p &amp;copy; 2024 Grocery Store. All rights reserved.
+      p &copy; 2024 Grocery Store. All rights reserved.
+
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js")
     script.
-      // JavaScript to automatically calculate the total amount
+      
       const quantityInput = document.getElementById('quantity');
       const priceInput = document.getElementById('price');
       const totalInput = document.getElementById('total');
-      
+
       function calculateTotal() {
-      const quantity = parseFloat(quantityInput.value) || 0;
-      const price = parseFloat(priceInput.value) || 0;
-      totalInput.value = (quantity * price).toFixed(2);
+        const quantity = parseFloat(quantityInput.value) || 0;
+        const price = parseFloat(priceInput.value) || 0;
+        totalInput.value = (quantity * price).toFixed(2);
       }
-      
+
       quantityInput.addEventListener('input', calculateTotal);
       priceInput.addEventListener('input', calculateTotal);

@@ -66,4 +66,45 @@ router.post("/delete-sales", async (req, res) => {
   }
 });
 
+
+// router.get("/receipt",(req,res)=>res.render('receipt'))
+// Route to display the receipt
+router.get('/receipt/:id', async (req, res) => {
+  try {
+    // Fetch the sale by ID
+    const sale = await Sale.findById(req.params.id);
+
+    // Check if sale exists
+    if (!sale) {
+      return res.status(404).send('Sale not found');
+    }
+
+    // Render the receipt template with sale data
+    res.render('receipt', { sale });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Server error');
+  }
+});
+
+// Route to generate the report
+router.get('/report', async (req, res) => {
+  try {
+    // Fetch data from your database
+    const sales = await Sale.find({}).exec(); // Adjust query as needed
+
+    // Calculate totals
+    const totalSales = sales.reduce((sum, sale) => sum + sale.total, 0);
+
+    // Render the report
+    res.render('report', {
+      sales: sales,
+      totalSales: totalSales
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Server error');
+  }
+});
+
 module.exports = router;

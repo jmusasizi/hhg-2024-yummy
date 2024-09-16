@@ -1,26 +1,39 @@
 const mongoose = require('mongoose');
 
 const creditsalesSchema = new mongoose.Schema({
-    stocksname: {
+    customername: {
         type: String,
         trim: true,
     },
-    creditsalestype: {
-        type: String,  // Use 'String' with an uppercase 'S'
+    customercontact: {
+        type: String,
         trim: true,
     },
-    tonnage:{
-        type: Number,
-        trim:true,
-    },
-    amountdue:{
-        type: Number,
-        trim:true,
-    },
-    buyername:{
+    
+    productname: {
         type: String,
-        trim:true,
+        trim: true,
     },
+    price: {
+        type: Number,
+        trim: true,
+    },
+    total: {
+        type: Number,  // Use 'String' with an uppercase 'S'
+        trim: true,
+    },
+    // tonnage:{
+    //     type: Number,
+    //     trim:true,
+    // },
+    // amountdue:{
+    //     type: Number,
+    //     trim:true,
+    // },
+    // buyername:{
+    //     type: String,
+    //     trim:true,
+    // },
     storagebranch:{
         type: String,
         trim:true,
@@ -33,10 +46,10 @@ const creditsalesSchema = new mongoose.Schema({
         type: Number,
         trim:true,
     },
-    contact:{
-        type: Number,
-        trim:true,
-    },
+    // contact:{
+    //     type: Number,
+    //     trim:true,
+    // },
     duedate:{
         type: Number,
         trim:true,
@@ -45,8 +58,8 @@ const creditsalesSchema = new mongoose.Schema({
         type: Number,
         trim:true,
     },
-    receipt:{
-        type: String,
+    quantity:{
+        type: Number,
         trim:true,
     },
 });

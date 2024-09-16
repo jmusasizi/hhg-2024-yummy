@@ -7,7 +7,7 @@ body {
 }
 
 .header, .footer {
-  background-color: #f8f8f8;
+  background-color:pink;
   padding: 10px;
   text-align: center;
   border-bottom: 1px solid #ddd;
@@ -20,7 +20,7 @@ body {
 
 h1 {
   margin: 0;
-  color: #333;
+  color: pink;
 }
 
 .navbar {
@@ -50,7 +50,7 @@ h1 {
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: peachpuff;
 }
 
 .credit-sales-form h2 {
@@ -74,7 +74,7 @@ h1 {
 .credit-sales-form button {
   padding: 10px 20px;
   font-size: 16px;
-  color: #fff;
+  color:lemonchiffon;
   background-color: #007bff;
   border: none;
   border-radius: 4px;

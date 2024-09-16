@@ -21,7 +21,7 @@ const userRoutes = require("./routes/userRoutes");
 const authRoutes = require("./routes/authRoutes");
 const pageRoutes = require("./routes/pageRoutes");
 const stockRoutes = require("./routes/stockRoutes");
- const salesRoutes = require("./routes/salesRoutes");
+const salesRoutes = require("./routes/salesRoutes");
 const makecreditsales =require('./routes/makecreditsalesRoutes')
 // instantiations
 const app = express();

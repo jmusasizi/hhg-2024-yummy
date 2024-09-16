@@ -1,0 +1,94 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Green Thumb Gardening Business Report
+    style.
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: pink;
+      }
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: lightblue;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+      h1, h2, h3 {
+        color: #333;
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .header img {
+        width: 150px;
+        height: auto;
+      }
+      .overview, .sales-data, .summary {
+        margin-bottom: 20px;
+      }
+      .overview p, .sales-data p, .summary p {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      table, th, td {
+        border: 1px solid #ddd;
+      }
+      th, td {
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f4f4f4;
+      }
+      .total {
+        font-weight: bold;
+      }
+      .footer {
+        text-align: center;
+        font-size: 14px;
+        color: #777;
+      }
+  body
+    .container
+      .header
+       
+        h1 Happy Hoe Grocery
+        p Kampala City, 56789
+        p Phone: (079) 356-7890 | Email: joseph@gmail.com
+
+      .sales-data
+        h2 Sales Report
+        table
+          thead
+            tr
+              th Date
+              th Product
+              th Quantity Sold
+              th  Price
+              th Total Sales
+          tbody
+            each sale in sales
+              tr
+                td #{sale.producename}
+                td #{sale.quantity}
+                td #{sale.price}
+                td #{sale.total}
+          tfoot
+            tr
+              td.total(colspan='4') Total Sales
+              td.total ugx #{totalSales.toFixed(2)}
+
+      .footer
+        p &copy; 2024 Green Thumb Gardening. All rights reserved.
