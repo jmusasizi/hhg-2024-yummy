@@ -59,8 +59,8 @@ router.post("/update-sales-page", async (req, res) => {
 // delete stock
 router.post("/delete-sales", async (req, res) => {
   try {
-    await Sales.deleteOne({ _id: req.body.id });
-    res.redirect("back");
+    await Sale.deleteOne({ _id: req.body.id });
+    res.redirect("/saleslist-page");
   } catch (err) {
     res.status(400).send("Unable to delete sales in the database");
   }

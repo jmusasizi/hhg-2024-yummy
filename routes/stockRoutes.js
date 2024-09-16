@@ -11,63 +11,73 @@ router.get("/add-stock-page", (req, res) => {
 
 router.post("/add-stock-page", async (req, res) => {
   try {
-    const newProduce = Stock(req.body);
+    const newProduce = new Stock(req.body); // Use 'new Stock' instead of 'Stock'
     await newProduce.save();
     res.redirect("/all-stock-page");
   } catch (err) {
-    res.status(400).render("add-stock");
-    console.log("Add Stock error", err);
+    console.error("Add Stock error:", err);
+    res.status(400).render("addstock");
   }
 });
 
-// all stock
-router.get(
-  "/all-stock-page",
-  // connectEnsureLogin.ensureLoggedIn()
+// View All Stock (accessible only to managers)
+router.get("/all-stock-page", 
+  // connectEnsureLogin.ensureLoggedIn(), // Uncomment if login enforcement is needed
   async (req, res) => {
     try {
-      if (req.session.user.role === "manager") {
-        // ensure that only managers access all-users page
-        const allStock = await Stock.find().sort({ $natural: -1 });
-        res.render("stocklist", {
-          stock: allStock,
-        });
+      if (req.session.user && req.session.user.role === "manager") {
+        const stocks = await Stock.find().sort({ $natural: -1 });
+        res.render("stocklist", { stock: stocks });
       } else {
-        res.send("Only Managers are allowed to access this page");
+        res.status(403).send("Only Managers are allowed to access this page");
       }
     } catch (error) {
+      console.error("Error fetching stock:", error);
       res.status(400).send("Unable to find stock in your database");
     }
   }
 );
 
-// update stock
+// Update Stock
 router.get("/update-stock-page/:id", async (req, res) => {
   try {
-    const dbStock = await Stock.findOne({ _id: req.params.id });
-    res.render("updatestock", {
-      stockItem: dbStock,
-    });
+    const dbStock = await Stock.findById(req.params.id);
+    if (dbStock) {
+      res.render("updatestock", { stockItem: dbStock });
+    } else {
+      res.status(404).send("Stock item not found");
+    }
   } catch (err) {
-    res.status(400).send("Unable to find user in the database");
+    console.error("Error fetching stock for update:");
+    res.status(400).send("Unable to find stock in the database");
   }
 });
 
 router.post("/update-stock-page", async (req, res) => {
   try {
-    await Stock.findOneAndUpdate({ _id: req.query.id }, req.body);
-    res.redirect("/all-stock-page");
+    const updatedStock = await Stock.findByIdAndUpdate(req.query.id, req.body, { new: true });
+    if (updatedStock) {
+      res.redirect("/all-stock-page");
+    } else {
+      res.status(404).send("Stock item not found for update");
+    }
   } catch (err) {
-    res.status(404).send("Unable to update stock in the database");
+    console.error("Error updating stock:");
+    res.status(400).send("Unable to update stock in the database");
   }
 });
 
-// delete stock
+// Delete Stock
 router.post("/delete-stock", async (req, res) => {
   try {
-    await Stock.deleteOne({ _id: req.body.id });
-    res.redirect("back");
+    const result = await Stock.deleteOne({ _id: req.body.id });
+    if (result.deletedCount > 0) {
+      res.redirect("back");
+    } else {
+      res.status(404).send("Stock item not found for deletion");
+    }
   } catch (err) {
+    console.error("Error deleting stock:", err);
     res.status(400).send("Unable to delete stock in the database");
   }
 });

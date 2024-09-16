@@ -26,7 +26,7 @@ html(lang="en")
             td 
               a(href="/update-sales-page/"+sale._id class="edit-btn") Edit
             td
-              form(method="POST" action="/delete-sale")
+              form(method="POST" action="/delete-sales")
                 input(type="hidden" name="id" value=sale._id)  
                 button(class="delete-btn" type="submit") Delete
             td
